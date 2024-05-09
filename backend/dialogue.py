@@ -11,4 +11,3 @@ def generate_dialogue_prompt():
         # I will add  more dialogue prompts here
     ]
     return random.choice(prompts)
-

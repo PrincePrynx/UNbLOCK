@@ -11,4 +11,3 @@ def generate_fiction_prompt():
         # I will add more fiction prompts here
     ]
     return random.choice(prompts)
-

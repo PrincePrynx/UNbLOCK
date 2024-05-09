@@ -12,4 +12,3 @@ def generate_poetry_prompt():
         # I will add more poetry prompts here
     ]
     return random.choice(prompts)
-

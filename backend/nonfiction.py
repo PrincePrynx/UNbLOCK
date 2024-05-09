@@ -11,4 +11,3 @@ def generate_nonfiction_prompt():
         # I will add more nonfiction prompts here
     ]
     return random.choice(prompts)
-

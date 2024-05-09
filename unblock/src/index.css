@@ -1,0 +1,81 @@
+/* Styles for landing page */
+.landing-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.slogan {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.navigation a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for other pages */
+.about-page, .creator-page, .category-page, .prompt-generator {
+  text-align: center;
+  padding: 20px;
+}
+
+.category-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-page li {
+  margin-bottom: 10px;
+}
+
+.category-page a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.category-page a:hover {
+  text-decoration: underline;
+}
+
+.prompt-generator ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.prompt-generator li {
+  margin-bottom: 10px;
+}
