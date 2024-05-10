@@ -1,8 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/unblock';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
-import './index.html'
+import App from './App';
+import './index.html';
+
 import LandingPage from './components/LandingPage';
 import AboutPage from './components/AboutPage';
 import CreatorPage from './components/CreatorPage';

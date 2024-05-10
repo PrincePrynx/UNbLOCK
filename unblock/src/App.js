@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import About from './components/About';
-import Creator from './components/Creator';
+import AboutPage from './components/AboutPage';
+import CreatorPage from './components/CreatorPage';
 import LandingPage from './components/LandingPage';
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
           <Route path="/" exact>
             <LandingPage handleUserName={handleUserName} />
           </Route>
-          <Route path="/about" component={About} />
-          <Route path="/creator" component={Creator} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/creator" component={CreatorPage} />
         </Switch>
       </div>
     </Router>
