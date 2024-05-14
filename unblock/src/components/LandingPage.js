@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const LandingPage = ({ setName }) => {
+function LandingPage ({ setName }) {
   const [nameInput, setNameInput] = useState('');
 
   const handleInputChange = (event) => {

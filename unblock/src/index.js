@@ -1,9 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/unblock';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import './index.html';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+// import './index.html';
 
 import LandingPage from './components/LandingPage';
 import AboutPage from './components/AboutPage';
@@ -14,7 +16,7 @@ import PromptGenerator from './components/PromptGenerator';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Switch>
+      <Routes>
         <Route exact path="/">
           <LandingPage />
         </Route>
@@ -28,8 +30,9 @@ ReactDOM.render(
           <CategoryPage />
         </Route>
         <Route path="/generate/:category" render={({ match }) => <PromptGenerator category={match.params.category} />} />
-      </Switch>
+      </Routes>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
+reportWebVitals();

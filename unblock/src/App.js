@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutPage from './components/AboutPage';
 import CreatorPage from './components/CreatorPage';
 import LandingPage from './components/LandingPage';
@@ -14,16 +14,16 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Switch>
+        <Routes>
           <Route path="/" exact>
             <LandingPage handleUserName={handleUserName} />
           </Route>
           <Route path="/about" component={AboutPage} />
           <Route path="/creator" component={CreatorPage} />
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
-}
+} 
 
-export default App;
+// export default App;

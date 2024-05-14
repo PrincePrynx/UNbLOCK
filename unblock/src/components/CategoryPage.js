@@ -1,14 +1,14 @@
 import React from 'react';
 
-const CategoryPage = () => {
+function CategoryPage () {
   return (
     <div className="category-page">
       <h2>Choose a Category</h2>
       <ul>
-        <li><a href="#">Dialogue</a></li>
-        <li><a href="#">Poetry</a></li>
-        <li><a href="#">Nonfiction</a></li>
-        <li><a href="#">Fiction</a></li>
+        <li><a href="#top">Dialogue</a></li>
+        <li><a href="#top">Poetry</a></li>
+        <li><a href="#top">Nonfiction</a></li>
+        <li><a href="#top">Fiction</a></li>
       </ul>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CreatorPage = () => {
+function CreatorPage () {
   return (
     <div className="creator-page">
       <h2>Meet the Creator</h2>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PromptGenerator = ({ category }) => {
+function PromptGenerator ({ category }) {
   // Function to generate prompts based on the selected category
   const generatePrompts = () => {
     // Implement prompt generation logic here
