@@ -1,7 +1,11 @@
 // server.js - Entry point for the Express server
 
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
+const router = require('./routes/router')
+
+
 const { getRandomDialoguePrompt } = require("./dialogue");
 const { getRandomPoetryPrompt } = require("./poetry");
 const { getRandomNonfictionPrompt } = require("./nonfiction");
