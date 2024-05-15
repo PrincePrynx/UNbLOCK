@@ -1,0 +1,58 @@
+/* App.css - Styles for the React app */
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Prompt display styles */
+.prompt-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.prompt-container h2 {
+  font-size: 1.5em;
+}
+
+.prompt-container p {
+  font-size: 1.2em;
+}
+
+.refresh-button {
+  padding: 10px 20px;
+  background-color: #009688; /* Green */
+  color: white;
+  border: none;
+  font-size: 1em;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.refresh-button:hover {
+  background-color: #00796b; /* Darker green */
+}
