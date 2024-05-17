@@ -1,32 +1,25 @@
-// DialoguePrompt.js - Component for displaying dialogue prompts
+// DialoguePrompt.js - React component for displaying dialogue prompts
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-const DialoguePrompt = ({ name }) => {
+const DialoguePrompt = () => {
   const [prompt, setPrompt] = useState('');
 
-  // Function to fetch a dialogue prompt from the backend
-  const fetchDialoguePrompt = async () => {
+  const fetchPrompt = async () => {
     try {
-      const response = await axios.get('/dialogue');
+      const response = await axios.post('http://localhost:3001/generate-prompt', { category: 'dialogue' });
       setPrompt(response.data.prompt);
     } catch (error) {
-      console.error('Error fetching dialogue prompt:', error);
+      console.error('Error fetching prompt:', error);
     }
   };
-
-  // Fetch a dialogue prompt when the component mounts
-  useEffect(() => {
-    fetchDialoguePrompt();
-  }, []);
 
   return (
     <div>
       <h2>Dialogue Prompt</h2>
-      <p>Hello, {name}! Here's your dialogue prompt:</p>
-      <p>{prompt}</p>
-      <button onClick={fetchDialoguePrompt}>Refresh</button>
+      <button onClick={fetchPrompt}>Generate Prompt</button>
+      {prompt && <p>{prompt}</p>}
     </div>
   );
 };

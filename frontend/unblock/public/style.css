@@ -2,66 +2,197 @@
 
 /* Global styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #333;
-    padding: 10px 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* UNbLOCK text block styles */
-  .unblock-block {
-    text-align: center;
-    margin-top: 100px;
-  }
-  
-  .unblock-block h1 {
-    font-size: 3em;
-    color: #009688; /* Green */
-  }
-  
-  .unblock-block p {
-    font-size: 1.2em;
-    color: #666;
-  }
-  
-  .unblock-block input[type="text"] {
-    padding: 10px;
-    font-size: 1em;
-    margin-top: 10px;
-  }
-  
-  .unblock-block button {
-    padding: 10px 20px;
-    background-color: #009688; /* Green */
-    color: white;
-    border: none;
-    font-size: 1em;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  .unblock-block button:hover {
-    background-color: #00796b; /* Darker green */
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* UNbLOCK text block styles */
+.unblock-block {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.unblock-block h1 {
+  font-size: 3em;
+  color: #009688; /* Green */
+}
+
+.unblock-block p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.unblock-block input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.unblock-block button {
+  padding: 10px 20px;
+  background-color: #009688; /* Green */
+  color: white;
+  border: none;
+  font-size: 1em;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.unblock-block button:hover {
+  background-color: #00796b; /* Darker green */
+}
+
+/* Prompt section styles */
+.prompt-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.prompt-section button {
+  padding: 10px 20px;
+  background-color: #009688; /* Green */
+  color: white;
+  border: none;
+  font-size: 1em;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.prompt-section button:hover {
+  background-color: #00796b; /* Darker green */
+}
+
+#promptDisplay {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Add this to the existing styles.css file */
+
+.hidden {
+  display: none;
+}
+
+#promptGenerator {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#promptResult {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #009688; /* Green */
+}
+
+
+
+/* Add this to the existing styles.css file */
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* UNbLOCK text block styles */
+.unblock-block {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.unblock-block h1 {
+  font-size: 3em;
+  color: #009688; /* Green */
+}
+
+.unblock-block p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.unblock-block input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.unblock-block button {
+  padding: 10px 20px;
+  background-color: #009688; /* Green */
+  color: white;
+  border: none;
+  font-size: 1em;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.unblock-block button:hover {
+  background-color: #00796b; /* Darker green */
+}
+
+.hidden {
+  display: none;
+}
+
+#promptGenerator {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#promptResult {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #009688; /* Green */
+}
+

@@ -1,32 +1,25 @@
-// NonfictionPrompt.js - Component for displaying nonfiction prompts
+// NonfictionPrompt.js - React component for displaying nonfiction prompts
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-const NonfictionPrompt = ({ name }) => {
+const NonfictionPrompt = () => {
   const [prompt, setPrompt] = useState('');
 
-  // Function to fetch a nonfiction prompt from the backend
-  const fetchNonfictionPrompt = async () => {
+  const fetchPrompt = async () => {
     try {
-      const response = await axios.get('/nonfiction');
+      const response = await axios.post('http://localhost:3001/generate-prompt', { category: 'nonfiction' });
       setPrompt(response.data.prompt);
     } catch (error) {
-      console.error('Error fetching nonfiction prompt:', error);
+      console.error('Error fetching prompt:', error);
     }
   };
-
-  // Fetch a nonfiction prompt when the component mounts
-  useEffect(() => {
-    fetchNonfictionPrompt();
-  }, []);
 
   return (
     <div>
       <h2>Nonfiction Prompt</h2>
-      <p>Hello, {name}! Here's your nonfiction prompt:</p>
-      <p>{prompt}</p>
-      <button onClick={fetchNonfictionPrompt}>Refresh</button>
+      <button onClick={fetchPrompt}>Generate Prompt</button>
+      {prompt && <p>{prompt}</p>}
     </div>
   );
 };
