@@ -1,11 +1,11 @@
 // App.js - Main application component with routing setup
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Author from './components/Author';
-import Contact from './components/Contact';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './components/home';
+import About from './components/about';
+import Author from './components/author';
+import Contact from './components/contact';
 import DialoguePrompt from './components/DialoguePrompt';
 import FictionPrompt from './components/FictionPrompt';
 import NonfictionPrompt from './components/NonfictionPrompt';
@@ -18,23 +18,23 @@ const App = () => {
         <header>
           <nav>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/author">Author</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><a href ="/">Home</a></li>
+              <li><a href ="/about">About</a></li>
+              <li><a href ="/author">Author</a></li>
+              <li><a href ="/contact">Contact</a></li>
             </ul>
           </nav>
         </header>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/author" component={Author} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/dialogue" component={DialoguePrompt} />
-          <Route path="/fiction" component={FictionPrompt} />
-          <Route path="/nonfiction" component={NonfictionPrompt} />
-          <Route path="/poetry" component={PoetryPrompt} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/author" element={<Author />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/dialogue" element={<DialoguePrompt />} />
+          <Route path="/fiction" element={<FictionPrompt />} />
+          <Route path="/nonfiction" element={<NonfictionPrompt />} />
+          <Route path="/poetry" element={<PoetryPrompt />} />
+        </Routes>
       </div>
     </Router>
   );
