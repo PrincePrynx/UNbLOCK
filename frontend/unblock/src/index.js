@@ -1,8 +1,8 @@
-// index.js - Entry point for the React app
+// src/index.js
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles.css'; // Imports the global stylesheet
 import App from './App';
 
 ReactDOM.render(

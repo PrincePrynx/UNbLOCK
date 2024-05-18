@@ -1,25 +1,39 @@
-// PoetryPrompt.js - React component for displaying poetry prompts
+// src/components/PoetryPrompt.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const PoetryPrompt = () => {
-  const [prompt, setPrompt] = useState('');
+  const [prompts, setPrompts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const fetchPrompt = async () => {
-    try {
-      const response = await axios.post('http://localhost:3001/generate-prompt', { category: 'poetry' });
-      setPrompt(response.data.prompt);
-    } catch (error) {
-      console.error('Error fetching prompt:', error);
-    }
-  };
+  useEffect(() => {
+    const fetchPrompts = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/prompts/poetry');
+        setPrompts(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching the poetry prompts", error);
+        setLoading(false);
+      }
+    };
+
+    fetchPrompts();
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div>
-      <h2>Poetry Prompt</h2>
-      <button onClick={fetchPrompt}>Generate Prompt</button>
-      {prompt && <p>{prompt}</p>}
+      <h1>Poetry Prompts</h1>
+      <ul>
+        {prompts.map((prompt, index) => (
+          <li key={index}>{prompt}</li>
+        ))}
+      </ul>
     </div>
   );
 };

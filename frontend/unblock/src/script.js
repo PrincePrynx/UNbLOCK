@@ -1,13 +1,34 @@
-// script.js - Script to handle user input and scrolling
+document.getElementById('startButton').addEventListener('click', () => {
+  const nameInput = document.getElementById('nameInput').value.trim();
+  if (nameInput !== '') {
+    document.getElementById('userName').textContent = nameInput;
+    document.querySelector('.unblock-block').classList.add('hidden');
+    document.getElementById('promptGenerator').classList.remove('hidden');
+  } else {
+    alert('Please enter your name to start.');
+  }
+});
 
-// Function to scroll to the main content section when the page loads
-window.onload = () => {
-    document.getElementById('nameInput').focus();
-  };
+document.getElementById('generateButton').addEventListener('click', async () => {
+  const category = document.getElementById('categorySelect').value;
   
-  // Function to scroll to the main content section when the "Start" button is clicked
-  document.getElementById('startButton').addEventListener('click', () => {
-    document.getElementById('nameInput').blur();
-    document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
-  });
-  
+  try {
+    const response = await fetch('http://localhost:3001/generate-prompt', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ category }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to generate prompt');
+    }
+
+    const data = await response.json();
+    document.getElementById('promptResult').textContent = data.prompt;
+  } catch (error) {
+    console.error('Error:', error);
+    document.getElementById('promptResult').textContent = 'Error generating prompt. Please try again.';
+  }
+});

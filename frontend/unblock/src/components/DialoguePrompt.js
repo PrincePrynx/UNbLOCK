@@ -1,25 +1,39 @@
-// DialoguePrompt.js - React component for displaying dialogue prompts
+// src/components/DialoguePrompt.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const DialoguePrompt = () => {
-  const [prompt, setPrompt] = useState('');
+  const [prompts, setPrompts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const fetchPrompt = async () => {
-    try {
-      const response = await axios.post('http://localhost:3001/generate-prompt', { category: 'dialogue' });
-      setPrompt(response.data.prompt);
-    } catch (error) {
-      console.error('Error fetching prompt:', error);
-    }
-  };
+  useEffect(() => {
+    const fetchPrompts = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/prompts/dialogue');
+        setPrompts(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching the dialogue prompts", error);
+        setLoading(false);
+      }
+    };
+
+    fetchPrompts();
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div>
-      <h2>Dialogue Prompt</h2>
-      <button onClick={fetchPrompt}>Generate Prompt</button>
-      {prompt && <p>{prompt}</p>}
+      <h1>Dialogue Prompts</h1>
+      <ul>
+        {prompts.map((prompt, index) => (
+          <li key={index}>{prompt}</li>
+        ))}
+      </ul>
     </div>
   );
 };

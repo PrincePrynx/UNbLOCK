@@ -1,53 +1,16 @@
-
-
-// nonfiction.js - Generates nonfiction prompts
+// backend/nonfiction.js
 
 const nonfictionPrompts = [
-  "Write about a personal experience that changed your life.",
-  "Describe a place that holds significant meaning to you and why.",
-  "Write an essay on the importance of mental health awareness.",
-  "Interview someone you admire and write about their life story.",
-  "Explore a historical event and write about its impact on today's world."
+  "Write an essay about a moment in your life that changed your perspective.",
+  "Describe a place you have visited that left a lasting impression on you.",
+  "Write a nonfiction piece about a person who has greatly influenced you.",
+  "Reflect on a challenge you overcame and what you learned from it.",
+  "Write about an experience that made you understand a different culture better."
 ];
 
-const generateNonfictionPrompt = () => {
+function getRandomNonfictionPrompt() {
   const randomIndex = Math.floor(Math.random() * nonfictionPrompts.length);
   return nonfictionPrompts[randomIndex];
-};
+}
 
-module.exports = {
-  generateNonfictionPrompt,
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // nonfiction.js - Logic for generating nonfiction prompts
-
-// // Sample nonfiction prompts
-// const nonfictionPrompts = [
-//     "Write an essay discussing the impact of social media on mental health.",
-//     "Compose a blog post about the importance of sustainable living.",
-//     "Create a research paper outlining the effects of climate change on biodiversity.",
-//   ];
-  
-//   // Function to get a random nonfiction prompt
-//   function getRandomNonfictionPrompt() {
-//     const randomIndex = Math.floor(Math.random() * nonfictionPrompts.length);
-//     return nonfictionPrompts[randomIndex];
-//   }
-  
-//   module.exports = {
-//     getRandomNonfictionPrompt,
-//   };
-  
+module.exports = getRandomNonfictionPrompt;

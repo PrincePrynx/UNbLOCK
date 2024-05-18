@@ -1,43 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UNbLOCK</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="author.html">Author</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <div class="unblock-block">
-      <h1>UNbLOCK</h1>
-      <p>Type your name here:</p>
-      <input type="text" id="nameInput" placeholder="Your Name">
-      <button id="startButton">Start</button>
-    </div>
-    <div id="promptGenerator" class="hidden">
-      <h2>Welcome, <span id="userName"></span>!</h2>
-      <label for="categorySelect">Choose a category:</label>
-      <select id="categorySelect">
-        <option value="dialogue">Dialogue</option>
-        <option value="poetry">Poetry</option>
-        <option value="nonfiction">Nonfiction</option>
-        <option value="fiction">Fiction</option>
-      </select>
-      <button id="generateButton">Generate Prompt</button>
-      <div id="promptResult"></div>
-    </div>
-  </main>
-
+    <div id="root"></div>
   <script src="script.js"></script>
 </body>
 </html>
