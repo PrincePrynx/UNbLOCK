@@ -24,11 +24,11 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <h1>UNbLOCK</h1>
+      <h1>UN<span>b</span>LOCK</h1>
       <p>[ a writer's best friend ]</p>
       {!enteredName ? (
         <form onSubmit={handleNameSubmit}>
-          <label htmlFor="name">Type your name here:<br></br></label>
+          <label htmlFor="name">Hi! Enter your name<br></br>and let's get writing<br></br></label>
           <input
             type="text"
             id="name"

@@ -45,7 +45,7 @@ nav ul li a {
 
 .refresh-button {
   padding: 10px 20px;
-  background-color: #009688; /* Green */
+  background-color: #009688; 
   color: white;
   border: none;
   font-size: 1em;
@@ -54,5 +54,5 @@ nav ul li a {
 }
 
 .refresh-button:hover {
-  background-color: #00796b; /* Darker green */
+  background-color: #00796b; 
 }

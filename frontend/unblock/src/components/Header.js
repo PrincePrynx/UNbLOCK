@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <ul className="nav-links">
+        <ul className="header">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/author">Author</Link></li>
