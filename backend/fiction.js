@@ -1,4 +1,6 @@
 // backend/fiction.js
+const express = require('express');
+const router = express.Router();
 
 const fictionPrompts = [
   "Write a story about a character who discovers a hidden talent that changes their life.",
@@ -14,3 +16,4 @@ function getRandomFictionPrompt() {
 }
 
 module.exports = getRandomFictionPrompt;
+module.exports = router;

@@ -1,5 +1,9 @@
 // backend/poetry.js
 
+const express = require('express');
+const router = express.Router();
+
+
 const poetryPrompts = [
   "Write a poem about the changing seasons.",
   "Create a poem that captures the feeling of a first love.",
@@ -14,3 +18,4 @@ function getRandomPoetryPrompt() {
 }
 
 module.exports = getRandomPoetryPrompt;
+module.exports = router;

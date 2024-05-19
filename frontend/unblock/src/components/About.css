@@ -1,0 +1,29 @@
+/* About.css */
+
+/* Container for the About page content */
+.about-container {
+    padding: 60px 20px; /* Padding around the content, with extra space at the top to avoid overlap with header */
+    margin: 0 auto; /* Center the content */
+    max-width: 800px; /* Limit the maximum width */
+    text-align: center; /* Center-align text */
+    font-family: 'Arial', sans-serif; /* Font style */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Heading styling */
+  .about-container h1 {
+    font-size: 2.5rem; /* Large font size */
+    color: #333; /* Dark grey color */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  /* Paragraph styling */
+  .about-container p {
+    font-size: 1.2rem; /* Slightly larger font size */
+    color: #666; /* Medium grey color */
+    line-height: 1.6; /* Line height for readability */
+  }
+  

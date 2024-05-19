@@ -1,66 +1,46 @@
-
-
-/* * {
-  margin: 20px;
-  padding: 0px 00px;
-} */
-
-
 /* Header container */
+header {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding around the content */
+  position: fixed; /* Fix header at the top */
+  top: 0; /* Position at the top */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure header is on top */
+}
+
+/* Navigation bar within the header */
+nav {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+/* Unordered list for navigation links */
 .header {
-  background-color: #c2acac; 
-  width: 100%;
-  height: 80px;
-  color: #d2b3b3; 
-  padding: 5px; 
-  text-align: right; 
+  display: flex; /* Flexbox for horizontal alignment */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default list style */
 }
 
-/* Header title */
-.header h1 {
-  margin: 20px; 
-}
-
-
-.header ul {
-  list-style-type: none; 
-  padding: 20px; 
-}
-
+/* Individual list items */
 .header li {
-  font-size: 10px;
-  display: inline; 
-  margin-right: 10px; 
+  margin-right: 20px; /* Spacing between navigation items */
 }
 
+/* Navigation links */
 .header a {
-  color: #ffffff; 
-  text-decoration: none; 
+  color: #fff; /* Text color for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size */
 }
 
+/* Navigation links on hover */
 .header a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
+/* Extra padding for body content to avoid overlap with fixed header */
+body {
+  padding-top: 60px; /* Adjust according to the height of your header */
+}

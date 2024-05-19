@@ -1,4 +1,6 @@
 // backend/nonfiction.js
+const express = require('express');
+const router = express.Router();
 
 const nonfictionPrompts = [
   "Write an essay about a moment in your life that changed your perspective.",
@@ -14,3 +16,4 @@ function getRandomNonfictionPrompt() {
 }
 
 module.exports = getRandomNonfictionPrompt;
+module.exports = router;

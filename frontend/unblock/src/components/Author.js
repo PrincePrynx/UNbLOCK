@@ -1,12 +1,14 @@
-// src/components/Author.js
+// Author.js - React component for the Author page
 
 import React from 'react';
+import './Author.css';
 
 const Author = () => {
   return (
-    <div>
+    <div className="author-container">
+      <img src="author-photo.jpg" alt="Author" />
       <h1>About the Author</h1>
-      <p>This project was created by Prynx, a passionate developer and writer who understands the challenges of overcoming writer's block. With a background in both literature and technology, [Your Name] aimed to create a tool that bridges the gap between creativity and functionality.</p>
+      <p>Prynx is a passionate writer with over 10 years of experience in creative writing...</p>
     </div>
   );
 };

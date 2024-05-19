@@ -28,7 +28,7 @@ const Home = () => {
       <p>[ a writer's best friend ]</p>
       {!enteredName ? (
         <form onSubmit={handleNameSubmit}>
-          <label htmlFor="name">Hi! Enter your name<br></br>and let's get writing<br></br></label>
+          <label htmlFor="name">Tell us your name Let's get writing!<br></br></label>
           <input
             type="text"
             id="name"

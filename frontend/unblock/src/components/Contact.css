@@ -1,0 +1,64 @@
+/* Contact.css */
+
+/* Container for the Contact page content */
+.contact-container {
+    padding: 60px 20px; /* Padding around the content, with extra space at the top to avoid overlap with header */
+    margin: 0 auto; /* Center the content */
+    max-width: 800px; /* Limit the maximum width */
+    text-align: center; /* Center-align text */
+    font-family: 'Arial', sans-serif; /* Font style */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Heading styling */
+  .contact-container h1 {
+    font-size: 2.5rem; /* Large font size */
+    color: #333; /* Dark grey color */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  /* Paragraph styling */
+  .contact-container p {
+    font-size: 1.2rem; /* Slightly larger font size */
+    color: #666; /* Medium grey color */
+    line-height: 1.6; /* Line height for readability */
+  }
+  
+  /* Form styling */
+  .contact-container form {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center align items */
+  }
+  
+  /* Input and Textarea styling */
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Maximum width */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 20px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+  }
+  
+  /* Submit button styling */
+  .contact-container button {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding around the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Submit button hover effect */
+  .contact-container button:hover {
+    background-color: #555; /* Slightly lighter background color on hover */
+  }
+  
