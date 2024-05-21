@@ -1,20 +1,17 @@
-// src/components/FictionPrompt.js
+import React, { useState, useEffect } from "react";
+import { fetchPoetryPrompts } from "../../services/promptService";
 
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
-const FictionPrompt = () => {
+const PoetryPrompt = () => {
   const [prompts, setPrompts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPrompts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/prompts/fiction');
-        setPrompts(response.data);
+        const data = await fetchPoetryPrompts();
+        setPrompts(data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching the fiction prompts", error);
         setLoading(false);
       }
     };
@@ -28,7 +25,7 @@ const FictionPrompt = () => {
 
   return (
     <div>
-      <h1>Fiction Prompts</h1>
+      <h1>Poetry Prompts</h1>
       <ul>
         {prompts.map((prompt, index) => (
           <li key={index}>{prompt}</li>
@@ -38,4 +35,4 @@ const FictionPrompt = () => {
   );
 };
 
-export default FictionPrompt;
+export default PoetryPrompt;

@@ -1,13 +1,16 @@
 // src/components/Home.js
 
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Home.css'; 
-// import './styles.css';
+import React, { useState } from "react";
+import DialoguePrompt from "../prompts/DialoguePrompt";
+import FictionPrompt from "../prompts/FictionPrompt";
+import NonfictionPrompt from "../prompts/NonfictionPrompt";
+import PoetryPrompt from "../prompts/PoetryPrompt";
+import "./Home.css";
+
 const Home = () => {
-  const [name, setName] = useState('');
-  const [enteredName, setEnteredName] = useState('');
-  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [enteredName, setEnteredName] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -18,17 +21,21 @@ const Home = () => {
     setEnteredName(name);
   };
 
-  const navigateToPrompt = (category) => {
-    navigate(`/${category}`);
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
   };
 
   return (
     <div className="home-container">
-      <h1>UN<span>b</span>LOCK</h1>
+      <h1>
+        UN<span>b</span>LOCK
+      </h1>
       <p>[ a writer's best friend ]</p>
       {!enteredName ? (
         <form onSubmit={handleNameSubmit}>
-          <label htmlFor="name">Hi! Enter your name<br></br>and let's get writing<br></br></label>
+          <label htmlFor="name">
+            Hi! Enter your name<br></br>and let's get writing<br></br>
+          </label>
           <input
             type="text"
             id="name"
@@ -39,48 +46,38 @@ const Home = () => {
           <button type="submit">Enter</button>
         </form>
       ) : (
-        <div className="prompt-generator-options">
-          <h2>Hello, {enteredName}! Choose a prompt category:</h2>
-          <button onClick={() => navigateToPrompt('dialogue')}>Dialogue</button>
-          <button onClick={() => navigateToPrompt('fiction')}>Fiction</button>
-          <button onClick={() => navigateToPrompt('nonfiction')}>Nonfiction</button>
-          <button onClick={() => navigateToPrompt('poetry')}>Poetry</button>
-        </div>
+        <>
+          {!selectedCategory ? (
+            <div className="prompt-generator-options">
+              <h2>Hello, {enteredName}! Choose a prompt category:</h2>
+              <button onClick={() => handleCategorySelect("dialogue")}>
+                Dialogue
+              </button>
+              <button onClick={() => handleCategorySelect("fiction")}>
+                Fiction
+              </button>
+              <button onClick={() => handleCategorySelect("nonfiction")}>
+                Nonfiction
+              </button>
+              <button onClick={() => handleCategorySelect("poetry")}>
+                Poetry
+              </button>
+            </div>
+          ) : (
+            <div>
+              {selectedCategory === "dialogue" && <DialoguePrompt />}
+              {selectedCategory === "fiction" && <FictionPrompt />}
+              {selectedCategory === "nonfiction" && <NonfictionPrompt />}
+              {selectedCategory === "poetry" && <PoetryPrompt />}
+            </div>
+          )}
+        </>
       )}
     </div>
   );
 };
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // // Home.js - React component for the Home page
 

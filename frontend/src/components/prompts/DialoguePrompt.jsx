@@ -1,20 +1,17 @@
-// src/components/NonfictionPrompt.js
+import React, { useState, useEffect } from "react";
+import { fetchDialoguePrompts } from "../../services/promptService";
 
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
-const NonfictionPrompt = () => {
+const DialoguePrompt = () => {
   const [prompts, setPrompts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPrompts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/prompts/nonfiction');
-        setPrompts(response.data);
+        const data = await fetchDialoguePrompts();
+        setPrompts(data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching the nonfiction prompts", error);
         setLoading(false);
       }
     };
@@ -28,7 +25,7 @@ const NonfictionPrompt = () => {
 
   return (
     <div>
-      <h1>Nonfiction Prompts</h1>
+      <h1>Dialogue Prompts</h1>
       <ul>
         {prompts.map((prompt, index) => (
           <li key={index}>{prompt}</li>
@@ -38,4 +35,4 @@ const NonfictionPrompt = () => {
   );
 };
 
-export default NonfictionPrompt;
+export default DialoguePrompt;
