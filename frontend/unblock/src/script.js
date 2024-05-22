@@ -13,7 +13,7 @@ document.getElementById('generateButton').addEventListener('click', async () => 
   const category = document.getElementById('categorySelect').value;
   
   try {
-    const response = await fetch('http://localhost:3001/generate-prompt', {
+    const response = await fetch('https://unblock-nelt.onrender.com/generate-prompt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
