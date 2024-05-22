@@ -9,7 +9,10 @@ const port = 5000;
 
 const promptsRouter = require('./api/prompts');
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://unblock-1.onrender.com/'
+}));
+
 app.use(bodyParser.json());
 
 app.use('/api/prompts', promptsRouter);
