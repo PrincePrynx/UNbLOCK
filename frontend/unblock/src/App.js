@@ -13,7 +13,15 @@ import NonfictionPrompt from './components/NonfictionPrompt';
 import PoetryPrompt from './components/PoetryPrompt';
 import './App.css';
 
+
 const App = () => {
+  const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    fetch('https://unblock-nelt.onrender.com/api')
+      .then(response => response.text())
+      .then(data => setMessage(data));
+  }, []);
   return (
     <Router>
       <div>
