@@ -10,7 +10,7 @@ const FictionPrompt = () => {
   useEffect(() => {
     const fetchPrompts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/prompts/fiction');
+        const response = await axios.get('https://unblock-nelt.onrender.com/api/prompts/fiction');
         setPrompts(response.data);
         setLoading(false);
       } catch (error) {
