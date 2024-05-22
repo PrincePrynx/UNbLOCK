@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css'; 
+import PromptCategory from './PromptCategory';
 // import './styles.css';
 const Home = () => {
   const [name, setName] = useState('');
@@ -28,7 +29,7 @@ const Home = () => {
       <p>[ a writer's best friend ]</p>
       {!enteredName ? (
         <form onSubmit={handleNameSubmit}>
-          <label htmlFor="name">Tell us your name Let's get writing!<br></br></label>
+          <label htmlFor="name">Tell us your name and Let's get writing!<br></br></label>
           <input
             type="text"
             id="name"

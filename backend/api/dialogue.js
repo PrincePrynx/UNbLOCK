@@ -1,6 +1,6 @@
 // backend/dialogue.js
-const express = require('express');
-const router = express.Router();
+// const express = require('express');
+// const router = express.Router();
 
 const dialoguePrompts = [
   "Write a dialogue between two characters who just met on a blind date.",
@@ -16,4 +16,4 @@ function getRandomDialoguePrompt() {
 }
 
 module.exports = getRandomDialoguePrompt;
-module.exports = router;
+// module.exports = router;
